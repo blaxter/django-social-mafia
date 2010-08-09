@@ -1,0 +1,10 @@
+easy_install pip
+pip install virtualenv virtualenvwrapper
+[setup virtualenvwrapper]
+mkvirtualenv social_mafia --distribute --no-site-packages
+cdvirtualenv
+cp -R /path/to/django-social-mafia .
+cd django-social-mafia/social_mafia
+pip install -r pip-requirements.txt
+./manage.py syncdb
+./manage.py import_meneame 5
